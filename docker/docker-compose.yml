@@ -1,0 +1,39 @@
+version: "2.1"
+services:
+
+  phone_app_php:
+    container_name: phone_app_php
+    build: ./php/
+    volumes:
+      - ./../BackLaravel:/src
+    ports:
+      - 8000:8000
+    working_dir: /src
+    command: php artisan serve --port 8000 --host 0.0.0.0 --env=env.local
+    environment:
+      PHP_EXTENSION_XDEBUG: 1
+    depends_on:
+      - phone_app_mysql
+
+  phone_app_mysql:
+    container_name: phone_app_mysql
+    restart: always
+    image: mysql:5.7.24
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3309:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+
+  phone_app_phpmyadmin:
+    container_name: phone_app_phpmyadmin
+    restart: always
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: phone_app_mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: 123456

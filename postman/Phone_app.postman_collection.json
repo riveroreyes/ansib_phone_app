@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "8922bbd7-6227-44c4-a0f2-6f5f15604c03",
+		"name": "Phone_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Endpoint to retrieve the phone catalog, and pricing.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/api/product",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					]
+				},
+				"description": "Exercise 1: \n\nCreate an endpoint to retrieve the phone catalog, and pricing.\n * it returns a collection of phones, and their prices.\n * Each phone should contain a reference to its image, the name, the description,\nand its price. "
+			},
+			"response": []
+		},
+		{
+			"name": "Alive",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}alive",
+					"host": [
+						"{{url}}alive"
+					]
+				},
+				"description": "Testeo basico del Api"
+			},
+			"response": []
+		},
+		{
+			"name": "Endpoints to check and create an order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\":\"Cheila\",\n   \"surname\":\"Bautista\",\n   \"email\":\"cheilabautista@hotmail.com\",\n   \"phones\":[\n      {\n         \"id\":2,\n         \"quantity\":2\n      },\n      {\n         \"id\":3,\n         \"quantity\":2\n      },\n      {\n         \"id\":5,\n         \"quantity\":1\n      },\n      {\n         \"id\":6,\n         \"quantity\":1\n      },\n      {\n         \"id\":8,\n         \"quantity\":1\n      },\n      {\n         \"id\":9,\n         \"quantity\":1\n      },\n      {\n         \"id\":10,\n         \"quantity\":1\n      }\n   ]\n}"
+				},
+				"url": {
+					"raw": "{{url}}order",
+					"host": [
+						"{{url}}order"
+					]
+				},
+				"description": "Exercise 2: \n\nCreate endpoints to check and create an order.\n * receives and order that contains the customer information name, surname, and\nemail, and the list of phones that the customer wants to buy.\n * Calculate the total prices of the order.\n * Log the final order to the console. "
+			},
+			"response": []
+		}
+	]
+}
