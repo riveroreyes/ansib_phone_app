@@ -90,6 +90,74 @@
 				"description": "Exercise 2: \n\nCreate endpoints to check and create an order.\n * receives and order that contains the customer information name, surname, and\nemail, and the list of phones that the customer wants to buy.\n * Calculate the total prices of the order.\n * Log the final order to the console. "
 			},
 			"response": []
+		},
+		{
+			"name": "Get Token Web Access",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\" : \"password\",\n    \"client_id\" : \"1\",\n    \"client_secret\" : \"EaZI9FyQ5k7a1nWCmXeaXtijk9nd2HEl1cyItGa0\",\n    \"username\" : \"carlos@gmail.com\",\n    \"password\" : \"password\"\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token External Device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\" : \"client_credentials\",\n    \"client_id\" : \"2\",\n    \"client_secret\" : \"LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP\"\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
