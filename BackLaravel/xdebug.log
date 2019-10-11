@@ -4006,3 +4006,15 @@
 [13] E: Could not connect to client. :-(
 [13] Log closed at 2019-10-11 04:12:37
 [13]
+[166] Log opened at 2019-10-11 14:00:02
+[166] I: Connecting to configured address/port: 172.17.0.1:9000.
+[166] W: Creating socket for '172.17.0.1:9000', poll success, but error: Operation now in progress (29).
+[166] E: Could not connect to client. :-(
+[166] Log closed at 2019-10-11 14:00:02
+[166]
+[481] Log opened at 2019-10-11 14:05:55
+[481] I: Connecting to configured address/port: 172.17.0.1:9000.
+[481] W: Creating socket for '172.17.0.1:9000', poll success, but error: Operation now in progress (29).
+[481] E: Could not connect to client. :-(
+[481] Log closed at 2019-10-11 14:05:55
+[481]

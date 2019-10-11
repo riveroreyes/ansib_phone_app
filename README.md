@@ -4,19 +4,30 @@ Api Productos y Ordenes - Laravel - AuthO2
 
 ## Docker oriented.
 	
-	** Levantar Docker **
+	Levantar Docker
 		Dentro de: /docker, ejecutar: 
 			docker-compose up -d
 
-	** Api en:  **
+	Actualizar dependencias:
+		Ingresar al contenedor de php:
+			ansib_phone_app/docker, ejecutar docker-compose exec phone_app_php bash
+
+		Instalar composer y actualizar dependencias:
+			curl -sS https://getcomposer.org/installer | php
+			sudo mv composer.phar /usr/local/bin/composer
+
+			Luego: composer update
+
+
+	Api en: 
 		http://0.0.0.0:8000/api
 
-	** Web para crear usuarios autentificados: **
+	Web para crear usuarios autentificados:
 		http://0.0.0.0:8000
 		Usuario: carlos@gmail.com
 		Contrasenha: password
 
-	** Scrip sql para levantar base de datos (Recomendado para pruebas): **
+	Scrip sql para levantar base de datos (Recomendado para pruebas):
 		/database/phone_app.sql
 
 		o realizar las migraciones de laravel (No crea usuarios)
@@ -24,11 +35,11 @@ Api Productos y Ordenes - Laravel - AuthO2
 
 ## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing. (Para pruebas, las rutas no estan autentificadas)
 
-	** Request: **
+	Request:
 		Método: GET
 		URL: http://0.0.0.0:8000/api/product
 	
-	** Response:  **
+	Response: 
 		[
 		    {
 		        "id": 1,
@@ -167,14 +178,14 @@ Api Productos y Ordenes - Laravel - AuthO2
 		    }
 		]	
 
-	** Test response Api con curl: **
+	Test response Api con curl:
 		curl -i -H "Accept:application/json" \
 		 	-H "Content-Type:application/json" \ 
 		 	"http://0.0.0.0:8000/api/product"
 
 ## Exercise 2: Create endpoints to check and create an order.	(Para pruebas, las rutas no estan autentificadas)	
 
-	** Request: **
+	Request:
 		Método: POST
 		URL: http://0.0.0.0:8000/api/order
 		Data:
@@ -214,7 +225,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 			   ]
 			}		
 	
-	** Response:  **
+	Response: 
 		{
 		    "number_order": 23,
 		    "customer_name": "Cheila Bautista",
@@ -275,7 +286,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 		    ]
 		}
 
-	** Test response Api con curl: **
+	Test response Api con curl:
 		curl -i -H "Accept:application/json" \ 
 			-H "Content-Type:application/json" \
 			-X POST http://0.0.0.0:8000/api/order \
@@ -298,30 +309,30 @@ Api Productos y Ordenes - Laravel - AuthO2
 
 ## Microservice approach
 
-	** Request: **
+	Request:
 		{
 		    "grant_type" : "client_credentials",
 		    "client_id" : "2",
 		    "client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"
 		}
 
-	** Response: **
+	Response:
 		{
 		    "token_type": "Bearer",
 		    "expires_in": 1296000,
 		    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRkNGYxZmYzODRiYjliNDZiNGFkMGYzMTc3OTk3ZmZmZjI5NWRlNGRkMDhhNzlhYTY4OGI3MTU4ZGNiYWY5YWZjZWQzOWRmMjQ0ODcxZThjIn0.eyJhdWQiOiIyIiwianRpIjoiZGQ0ZjFmZjM4NGJiOWI0NmI0YWQwZjMxNzc5OTdmZmZmMjk1ZGU0ZGQwOGE3OWFhNjg4YjcxNThkY2JhZjlhZmNlZDM5ZGYyNDQ4NzFlOGMiLCJpYXQiOjE1NzA3NjY5MzMsIm5iZiI6MTU3MDc2NjkzMywiZXhwIjoxNTcyMDYyOTMzLCJzdWIiOiIiLCJzY29wZXMiOltdfQ.vhOBRLXAUmOdW2EL1XX92OF22yilMxlu5Bsiv415LvjKldXcqlYU6DwlHsJ_eyuo2n-YrayUuXrDUkh7eaxsjvGVnnyVRpK5SDCNrM8uEMltam8inZQ1WTfBC8p_KFotbxOOOILVzlJWmk-RxHuwpc991X32BLntU8kRVpZhPa99byLmRl3FQ91uFmNECiGb4CI3D9B0JX4iy9xRlH2e14zFQblW-tYHDjBB9SH-jpRBUBraooaFBoN9Ldv3xDhjhWSozKuJApNY0mC_JkGzKKd109eZcHsDmWMFIfFujSnCzDydx6A2LA1z-V3dZScxzmINph4Bz-_mJwt3h9e7xrVmuKN4BPWYAn1OcPBo3lobBYWj0dT0mXcdv8fGIHNJIzzYLOwqiEhVtAFc7oCBweNfwrGlpg1ANtErv2f2GxpIuvTUrx4-6SvXq6Twbr7lRmTCt6Rzt4aVTcpERVyAbind4WH5LCwJ6WE8rj9STCNepqfiUkF4USAHMcO87bccY1_7vNIBBk_oUM0PeVPWkNxrowZSVN_eX8H-3uWWcmuFPMBK79lkzcLyBOmKccVAPOvv7Jk9SE7N6w4ncpWtAfeWX0gStAk9emkc59eucxnOX5nX0cdz00KusB4cY7Zus0pJHeSmftJvLJsruxtahV6K-DPB11utDS5yRLLe9HE"
 		}
 
-	** Test response Api con curl: **
+	Test response Api con curl:
 		curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST http://0.0.0.0:8000/oauth/token -d '{"grant_type" : "client_credentials","client_id" : "2","client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"}'	
 
 ## How would you improve the system?
 	Existen varias vias, dependiendo del punto de vista:
 
-	** Punto de vista de logica de negocios: **
+	Punto de vista de logica de negocios:
 		Desde luego, ya que es solo se habla de una parte de la orden de venta de telefonos, falta desarrollar clientes, grupos de celulares, marcas, etc.
 
-	** Desde el punto de vista tecnico: **
+	Desde el punto de vista tecnico:
 		Ejecutar colas de procesos asincronas, para distribuir las peticiones al api, esto tambien tiene conexion con el punto siguiente.
 
 ## How would you avoid your order API to be overflow?
