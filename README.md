@@ -33,7 +33,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 		o realizar las migraciones de laravel (No crea usuarios)
 			php artisan migrate --seed   , Crear base de datos y migrar datos de productos iniciales
 
-## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing. (Para pruebas, las rutas no estan autentificadas)
+## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing.##  (Para pruebas, las rutas no estan autentificadas)
 
 	Request:
 		Método: GET
@@ -183,7 +183,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 		 	-H "Content-Type:application/json" \ 
 		 	"http://0.0.0.0:8000/api/product"
 
-## Exercise 2: Create endpoints to check and create an order.	(Para pruebas, las rutas no estan autentificadas)	
+## Exercise 2: Create endpoints to check and create an order.## 	(Para pruebas, las rutas no estan autentificadas)	
 
 	Request:
 		Método: POST
