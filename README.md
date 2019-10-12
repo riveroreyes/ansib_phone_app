@@ -8,6 +8,10 @@ Api Productos y Ordenes - Laravel - AuthO2
 		Dentro de: /docker, ejecutar: 
 			docker-compose up -d
 
+	Ingresar a los contenedores:
+		Php: docker exec -it -u user phone_app_php bash
+		Mysql: docker exec -it phone_app_mysql bash
+
 	Api en: 
 		http://0.0.0.0:8000/api
 
@@ -16,8 +20,11 @@ Api Productos y Ordenes - Laravel - AuthO2
 		Usuario: carlos@gmail.com
 		Contrasenha: password
 
-	Scrip sql para levantar base de datos (Recomendado para pruebas):
-		/database/phone_app.sql
+	PhpAdmin:
+		http://0.0.0.0:8080
+
+		Aunque docker lo contiene: scrip sql para levantar base de datos:
+			/database/phone_app.sql
 
 		o realizar las migraciones de laravel (No crea usuarios)
 			php artisan migrate --seed   , Crear base de datos y migrar datos de productos iniciales
