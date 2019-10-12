@@ -23,7 +23,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 	PhpAdmin:
 		http://0.0.0.0:8080
 
-		Aunque docker lo contiene: scrip sql para levantar base de datos:
+		Aunque docker lo contiene: script sql para levantar base de datos:
 			/database/phone_app.sql
 
 		o realizar las migraciones de laravel (No crea usuarios)
