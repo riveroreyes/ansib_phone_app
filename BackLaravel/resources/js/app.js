@@ -12,4 +12,4 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./src/containers/WalletHome/WalletHome');
+require('./src/containers/PhoneHome/PhoneHome');

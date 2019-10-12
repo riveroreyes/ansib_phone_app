@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:8000
     working_dir: /src
-    command: php artisan serve --port 8000 --host 0.0.0.0 --env=env.local
+    command: composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local
     environment:
       PHP_EXTENSION_XDEBUG: 1
     depends_on:

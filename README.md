@@ -8,17 +8,6 @@ Api Productos y Ordenes - Laravel - AuthO2
 		Dentro de: /docker, ejecutar: 
 			docker-compose up -d
 
-	Actualizar dependencias:
-		Ingresar al contenedor de php:
-			ansib_phone_app/docker, ejecutar docker-compose exec phone_app_php bash
-
-		Instalar composer y actualizar dependencias:
-			curl -sS https://getcomposer.org/installer | php
-			sudo mv composer.phar /usr/local/bin/composer
-
-			Luego: composer update
-
-
 	Api en: 
 		http://0.0.0.0:8000/api
 
