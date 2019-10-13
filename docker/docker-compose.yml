@@ -8,8 +8,10 @@ services:
       - ./../BackLaravel:/src
     ports:
       - 8000:8000
+      - 1215:1215
     working_dir: /src
     command: composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local
+    #command: composer install --ignore-platform-reqs && php artisan swoole:http start
     environment:
       PHP_EXTENSION_XDEBUG: 1
     depends_on:

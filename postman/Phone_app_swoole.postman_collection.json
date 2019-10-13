@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "da4fa135-1036-4389-85a9-4a2e0a1bf38e",
+		"name": "Phone_app_swoole",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Endpoint to retrieve the phone catalog, and pricing.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1215/api/product",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1215",
+					"path": [
+						"api",
+						"product"
+					]
+				},
+				"description": "Exercise 1: \n\nCreate an endpoint to retrieve the phone catalog, and pricing.\n * it returns a collection of phones, and their prices.\n * Each phone should contain a reference to its image, the name, the description,\nand its price. "
+			},
+			"response": []
+		},
+		{
+			"name": "Alive",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1215/api/alive",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1215",
+					"path": [
+						"api",
+						"alive"
+					]
+				},
+				"description": "Testeo basico del Api"
+			},
+			"response": []
+		},
+		{
+			"name": "Endpoints to check and create an order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\":\"Cheila\",\n   \"surname\":\"Bautista\",\n   \"email\":\"cheilabautista@hotmail.com\",\n   \"phones\":[\n      {\n         \"id\":2,\n         \"quantity\":2\n      },\n      {\n         \"id\":3,\n         \"quantity\":2\n      },\n      {\n         \"id\":5,\n         \"quantity\":1\n      },\n      {\n         \"id\":6,\n         \"quantity\":1\n      },\n      {\n         \"id\":8,\n         \"quantity\":1\n      },\n      {\n         \"id\":9,\n         \"quantity\":1\n      },\n      {\n         \"id\":10,\n         \"quantity\":1\n      }\n   ]\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1215/api/order",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1215",
+					"path": [
+						"api",
+						"order"
+					]
+				},
+				"description": "Exercise 2: \n\nCreate endpoints to check and create an order.\n * receives and order that contains the customer information name, surname, and\nemail, and the list of phones that the customer wants to buy.\n * Calculate the total prices of the order.\n * Log the final order to the console. "
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token Web Access",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\" : \"password\",\n    \"client_id\" : \"1\",\n    \"client_secret\" : \"EaZI9FyQ5k7a1nWCmXeaXtijk9nd2HEl1cyItGa0\",\n    \"username\" : \"carlos@gmail.com\",\n    \"password\" : \"password\"\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1215/oauth/token",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1215",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token External Device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\" : \"client_credentials\",\n    \"client_id\" : \"2\",\n    \"client_secret\" : \"LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP\"\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:1215/oauth/token",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "1215",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

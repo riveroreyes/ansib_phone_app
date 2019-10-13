@@ -178,6 +178,7 @@ return [
         //agregados manualmente
         Laravel\Passport\PassportServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+        SwooleTW\Http\LaravelServiceProvider::class,
     ],
 
     /*

@@ -5,28 +5,31 @@ Api Productos y Ordenes - Laravel - AuthO2
 ## Docker oriented.
 	
 	Levantar Docker
-		Dentro de: /docker, ejecutar: 
+		* Puertos:
+			Deben estar libres los puertos:
+				8000, 1215, 3309, 8080 (Caso contrario pueden ser configurados en docker/docker-compose.yml)
+		* Dentro de: /docker, ejecutar: 
 			docker-compose up -d
 
 	Ingresar a los contenedores:
-		Php: docker exec -it -u user phone_app_php bash
-		Mysql: docker exec -it phone_app_mysql bash
+		* Php: docker exec -it -u user phone_app_php bash
+		* Mysql: docker exec -it phone_app_mysql bash
 
 	Api en: 
-		http://0.0.0.0:8000/api
+		* http://0.0.0.0:8000/api
 
 	Web para crear usuarios autentificados:
-		http://0.0.0.0:8000
-		Usuario: carlos@gmail.com
-		Contrasenha: password
+		* http://0.0.0.0:8000
+		* Usuario: carlos@gmail.com
+		* Contrasenha: password
 
 	PhpAdmin:
-		http://0.0.0.0:8080
+		* http://0.0.0.0:8080
 
-		Aunque docker lo contiene: script sql para levantar base de datos:
+		* Aunque docker lo contiene: script sql para levantar base de datos:
 			/database/phone_app.sql
 
-		o realizar las migraciones de laravel (No crea usuarios)
+		* O realizar las migraciones de laravel (No crea usuarios)
 			php artisan migrate --seed   , Crear base de datos y migrar datos de productos iniciales
 
 ## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing. (Para pruebas, las rutas no estan autentificadas)
@@ -292,6 +295,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 ## Pruebas del Api con postman:
 	Importar:
 		/postman/Phone_app.postman_collection.json
+		/postman/Phone_app_swoole.postman_collection.json
 
 
 ## It should have test.
@@ -304,6 +308,26 @@ Api Productos y Ordenes - Laravel - AuthO2
 
 
 ## Microservice approach
+
+	En esta sección utilizaremos [Swoole](https://www.swoole.co.uk/), Coroutine asynchronous programming framework for PHP,
+	el cual es ideal para generar microservicios ya que: "En comparación con otros marcos o software de programación 
+	asíncrona como Nginx, Tornado, Node.js, Swoole tiene módulos asíncronos de E / S de múltiples hilos integrados. 
+	Los desarrolladores pueden usar sincronización o asíncrona, API de rutina para escribir las aplicaciones. 
+	El marco de red PHP Swoole mejora la eficiencia del equipo de I + D, les permite centrarse en el desarrollo 
+	de productos innovadores.", extraido de su website.
+
+
+	Para ello deberemos:
+		* Detener el contenedor docker.
+		* Modificar docker-compose.yml, 
+			* Descomentando: command: composer install --ignore-platform-reqs && php artisan swoole:http start
+			* Comentando: #command: composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local
+
+		De esta forma activamos el host HTTP asincrono en 0.0.0.0:1215
+
+	Y teniendo configurado el framework Laravel para recibir una autentificación de dispositivo a dispositivo, tenemos las siguientes ventajas:
+		* Velocidad en las respuesta.
+		* Multi-hilos en las peticiones.
 
 	Request:
 		{
@@ -320,7 +344,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 		}
 
 	Test response Api con curl:
-		curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST http://0.0.0.0:8000/oauth/token -d '{"grant_type" : "client_credentials","client_id" : "2","client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"}'	
+		curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST http://0.0.0.0:1215/oauth/token -d '{"grant_type" : "client_credentials","client_id" : "2","client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"}'	
 
 ## How would you improve the system?
 	Existen varias vias, dependiendo del punto de vista:
