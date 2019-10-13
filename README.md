@@ -1,35 +1,40 @@
-# Phone App
-Api Productos y Ordenes - Laravel - Docker - Swoole - AuthO2
+
+# Phone App. Api Productos y Ordenes - Laravel - Docker - Swoole - AuthO2
+
+Este repositorio es un desarrollo inicial de un Api, autentificada, orientada a microservicios dentro de 
+contenedores docker.
 
 ## Docker oriented.
 	
-	Levantar Docker
-		* Puertos:
-			Deben estar libres los puertos:
-				8000, 1215, 3309, 8080 (Caso contrario pueden ser configurados en docker/docker-compose.yml)
-		* Dentro de: /docker, ejecutar: 
-			`docker-compose up -d`
+Para utilizar este contenedor Docker de desarrollo se deberá:
+	* Tener los siguente puertos libres (Pueden ser configurados en docker/docker-compose.yml):
+		* 8000, Laravel
+		* 1215, Swoole
+		* 3309, Mysql
+		* 8080, PhpAdmin 
 
-	Ingresar a los contenedores:
-		* Php: docker exec -it -u user phone_app_php bash
-		* Mysql: docker exec -it phone_app_mysql bash
+Levantar los contenedores
+	* Dentro de: /docker, ejecutar: 
+		`docker-compose up -d`
 
-	Api en: 
-		* http://0.0.0.0:8000/api
+Ingresar a los contenedores:
+	* Php: `docker exec -it -u user phone_app_php bash`
+	* Mysql: `docker exec -it phone_app_mysql bash`
 
-	Web para crear usuarios autentificados:
-		* http://0.0.0.0:8000
+Rutas principales:
+	* Api en: `http://0.0.0.0:8000/api`
+	* Web para crear usuarios autentificados:
+		* `http://0.0.0.0:8000`
 		* Usuario: carlos@gmail.com
 		* Contrasenha: password
+	* PhpAdmin:
+		* `http://0.0.0.0:8080`
 
-	PhpAdmin:
-		* http://0.0.0.0:8080
-
-		* Aunque docker lo contiene: script sql para levantar base de datos:
-			/database/phone_app.sql
-
-		* O realizar las migraciones de laravel (No crea usuarios)
-			php artisan migrate --seed   , Crear base de datos y migrar datos de productos iniciales
+Base de datos
+	* Aunque docker lo contiene: script sql para levantar base de datos:
+		* /database/phone_app.sql
+	* O realizar las migraciones de laravel (No crea usuarios)
+		* `php artisan migrate --seed`   , Crear base de datos y migrar datos de productos iniciales
 
 ## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing. (Para pruebas, las rutas no estan autentificadas)
 
