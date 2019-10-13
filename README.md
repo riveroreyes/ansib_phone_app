@@ -1,6 +1,5 @@
 # Phone App
-Api Productos y Ordenes - Laravel - AuthO2
-# ansib_phone_app
+Api Productos y Ordenes - Laravel - Docker - Swoole - AuthO2
 
 ## Docker oriented.
 	
@@ -9,7 +8,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 			Deben estar libres los puertos:
 				8000, 1215, 3309, 8080 (Caso contrario pueden ser configurados en docker/docker-compose.yml)
 		* Dentro de: /docker, ejecutar: 
-			docker-compose up -d
+			`docker-compose up -d`
 
 	Ingresar a los contenedores:
 		* Php: docker exec -it -u user phone_app_php bash
@@ -309,7 +308,7 @@ Api Productos y Ordenes - Laravel - AuthO2
 
 ## Microservice approach
 
-	En esta sección utilizaremos [Swoole](https://www.swoole.co.uk/), Coroutine asynchronous programming framework for PHP,
+	En esta sección utilizaremos Swoole [https://www.swoole.co.uk/](https://www.swoole.co.uk/), Coroutine asynchronous programming framework for PHP,
 	el cual es ideal para generar microservicios ya que: "En comparación con otros marcos o software de programación 
 	asíncrona como Nginx, Tornado, Node.js, Swoole tiene módulos asíncronos de E / S de múltiples hilos integrados. 
 	Los desarrolladores pueden usar sincronización o asíncrona, API de rutina para escribir las aplicaciones. 
@@ -360,8 +359,3 @@ Api Productos y Ordenes - Laravel - AuthO2
 	- Establecer un limite de conexiones por ventana de aplicacion, por ejemplo 20 solicitudes por token de acceso.
 	  Siempre enviando un mensaje informativo oportuno antes que el usuario alcance el limite y al alcanzarlo.
 
-
-			
-
-
-# ansib_phone_app
