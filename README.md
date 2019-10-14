@@ -331,22 +331,22 @@ Y teniendo configurado el framework Laravel para recibir una autentificación de
 * Velocidad en las respuesta.
 * Multi-hilos en las peticiones.
 
-	Request:
-		{
-		    "grant_type" : "client_credentials",
-		    "client_id" : "2",
-		    "client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"
-		}
+Request:
+	{
+	    "grant_type" : "client_credentials",
+	    "client_id" : "2",
+	    "client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"
+	}
 
-	Response:
-		{
-		    "token_type": "Bearer",
-		    "expires_in": 1296000,
-		    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRkNGYxZmYzODRiYjliNDZiNGFkMGYzMTc3OTk3ZmZmZjI5NWRlNGRkMDhhNzlhYTY4OGI3MTU4ZGNiYWY5YWZjZWQzOWRmMjQ0ODcxZThjIn0.eyJhdWQiOiIyIiwianRpIjoiZGQ0ZjFmZjM4NGJiOWI0NmI0YWQwZjMxNzc5OTdmZmZmMjk1ZGU0ZGQwOGE3OWFhNjg4YjcxNThkY2JhZjlhZmNlZDM5ZGYyNDQ4NzFlOGMiLCJpYXQiOjE1NzA3NjY5MzMsIm5iZiI6MTU3MDc2NjkzMywiZXhwIjoxNTcyMDYyOTMzLCJzdWIiOiIiLCJzY29wZXMiOltdfQ.vhOBRLXAUmOdW2EL1XX92OF22yilMxlu5Bsiv415LvjKldXcqlYU6DwlHsJ_eyuo2n-YrayUuXrDUkh7eaxsjvGVnnyVRpK5SDCNrM8uEMltam8inZQ1WTfBC8p_KFotbxOOOILVzlJWmk-RxHuwpc991X32BLntU8kRVpZhPa99byLmRl3FQ91uFmNECiGb4CI3D9B0JX4iy9xRlH2e14zFQblW-tYHDjBB9SH-jpRBUBraooaFBoN9Ldv3xDhjhWSozKuJApNY0mC_JkGzKKd109eZcHsDmWMFIfFujSnCzDydx6A2LA1z-V3dZScxzmINph4Bz-_mJwt3h9e7xrVmuKN4BPWYAn1OcPBo3lobBYWj0dT0mXcdv8fGIHNJIzzYLOwqiEhVtAFc7oCBweNfwrGlpg1ANtErv2f2GxpIuvTUrx4-6SvXq6Twbr7lRmTCt6Rzt4aVTcpERVyAbind4WH5LCwJ6WE8rj9STCNepqfiUkF4USAHMcO87bccY1_7vNIBBk_oUM0PeVPWkNxrowZSVN_eX8H-3uWWcmuFPMBK79lkzcLyBOmKccVAPOvv7Jk9SE7N6w4ncpWtAfeWX0gStAk9emkc59eucxnOX5nX0cdz00KusB4cY7Zus0pJHeSmftJvLJsruxtahV6K-DPB11utDS5yRLLe9HE"
-		}
+Response:
+	{
+	    "token_type": "Bearer",
+	    "expires_in": 1296000,
+	    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRkNGYxZmYzODRiYjliNDZiNGFkMGYzMTc3OTk3ZmZmZjI5NWRlNGRkMDhhNzlhYTY4OGI3MTU4ZGNiYWY5YWZjZWQzOWRmMjQ0ODcxZThjIn0.eyJhdWQiOiIyIiwianRpIjoiZGQ0ZjFmZjM4NGJiOWI0NmI0YWQwZjMxNzc5OTdmZmZmMjk1ZGU0ZGQwOGE3OWFhNjg4YjcxNThkY2JhZjlhZmNlZDM5ZGYyNDQ4NzFlOGMiLCJpYXQiOjE1NzA3NjY5MzMsIm5iZiI6MTU3MDc2NjkzMywiZXhwIjoxNTcyMDYyOTMzLCJzdWIiOiIiLCJzY29wZXMiOltdfQ.vhOBRLXAUmOdW2EL1XX92OF22yilMxlu5Bsiv415LvjKldXcqlYU6DwlHsJ_eyuo2n-YrayUuXrDUkh7eaxsjvGVnnyVRpK5SDCNrM8uEMltam8inZQ1WTfBC8p_KFotbxOOOILVzlJWmk-RxHuwpc991X32BLntU8kRVpZhPa99byLmRl3FQ91uFmNECiGb4CI3D9B0JX4iy9xRlH2e14zFQblW-tYHDjBB9SH-jpRBUBraooaFBoN9Ldv3xDhjhWSozKuJApNY0mC_JkGzKKd109eZcHsDmWMFIfFujSnCzDydx6A2LA1z-V3dZScxzmINph4Bz-_mJwt3h9e7xrVmuKN4BPWYAn1OcPBo3lobBYWj0dT0mXcdv8fGIHNJIzzYLOwqiEhVtAFc7oCBweNfwrGlpg1ANtErv2f2GxpIuvTUrx4-6SvXq6Twbr7lRmTCt6Rzt4aVTcpERVyAbind4WH5LCwJ6WE8rj9STCNepqfiUkF4USAHMcO87bccY1_7vNIBBk_oUM0PeVPWkNxrowZSVN_eX8H-3uWWcmuFPMBK79lkzcLyBOmKccVAPOvv7Jk9SE7N6w4ncpWtAfeWX0gStAk9emkc59eucxnOX5nX0cdz00KusB4cY7Zus0pJHeSmftJvLJsruxtahV6K-DPB11utDS5yRLLe9HE"
+	}
 
-	Test response Api con curl:
-		curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST http://0.0.0.0:1215/oauth/token -d '{"grant_type" : "client_credentials","client_id" : "2","client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"}'	
+Test response Api con curl:
+	curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST http://0.0.0.0:1215/oauth/token -d '{"grant_type" : "client_credentials","client_id" : "2","client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"}'	
 
 ## How would you improve the system?
 Existen varias vias, dependiendo del punto de vista:
