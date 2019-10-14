@@ -322,14 +322,14 @@ de productos innovadores.", extraido de su website.
 
 
 Para ello deberemos:
-	* Detener el contenedor docker.
-	* Activar el host HTTP asincrono en 0.0.0.0:1215, modificando docker-compose.yml: 
-		* Descomentando: command: `composer install --ignore-platform-reqs && php artisan swoole:http start`
-		* Comentando: #command: `composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local`
+* Detener el contenedor docker.
+* Activar el host HTTP asincrono en 0.0.0.0:1215, modificando docker-compose.yml: 
+	* Descomentando: command: `composer install --ignore-platform-reqs && php artisan swoole:http start`
+	* Comentando: #command: `composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local`
 
 Y teniendo configurado el framework Laravel para recibir una autentificación de dispositivo a dispositivo, tenemos las siguientes ventajas:
-	* Velocidad en las respuesta.
-	* Multi-hilos en las peticiones.
+* Velocidad en las respuesta.
+* Multi-hilos en las peticiones.
 
 	Request:
 		{
