@@ -1,7 +1,8 @@
 
 # Phone App.
 
-Api Productos y Ordenes - Laravel - Docker - Swoole - AuthO2
+### Api Productos y Ordenes - Laravel - Docker - Swoole - AuthO2
+
 
 Este repositorio es un desarrollo inicial de un Api, autentificada mediante token de acceso, orientada a microservicios dentro de 
 contenedores docker.
@@ -9,31 +10,32 @@ contenedores docker.
 ## Docker oriented.
 
 Desarrollado en Docker:	
-	Para utilizar este contenedor Docker de desarrollo se deberá:
-		* Tener los siguente puertos libres (Pueden ser configurados en docker/docker-compose.yml):
-			* 8000, Laravel
-			* 1215, Swoole
-			* 3309, Mysql
-			* 8080, PhpAdmin 
-	Levantar los contenedores
-		* Dentro de: /docker, ejecutar: 
-			`docker-compose up -d`
-	Ingresar a los contenedores:
-		* Php: `docker exec -it -u user phone_app_php bash`
-		* Mysql: `docker exec -it phone_app_mysql bash`
-	Rutas principales:
-		* Api en: `http://0.0.0.0:8000/api`
-		* Web para crear usuarios autentificados:
-			* `http://0.0.0.0:8000`
-			* Usuario: carlos@gmail.com
-			* Contrasenha: password
-		* PhpAdmin:
-			* `http://0.0.0.0:8080`
-	Base de datos
-		* Aunque docker lo contiene: script sql para levantar base de datos:
-			* /database/phone_app.sql
-		* O realizar las migraciones de laravel (No crea usuarios)
-			* `php artisan migrate --seed`   , Crear base de datos y migrar datos de productos iniciales
+
+* Para utilizar este contenedor Docker de desarrollo se deberá:
+	* Tener los siguente puertos libres (Pueden ser configurados en docker/docker-compose.yml):
+		* 8000, Laravel
+		* 1215, Swoole
+		* 3309, Mysql
+		* 8080, PhpAdmin 
+* Levantar los contenedores
+	* Dentro de: /docker, ejecutar: 
+		`docker-compose up -d`
+* Ingresar a los contenedores:
+	* Php: `docker exec -it -u user phone_app_php bash`
+	* Mysql: `docker exec -it phone_app_mysql bash`
+* Rutas principales:
+	* Api en: `http://0.0.0.0:8000/api`
+	* Web para crear usuarios autentificados:
+		* `http://0.0.0.0:8000`
+		* Usuario: carlos@gmail.com
+		* Contrasenha: password
+	* PhpAdmin:
+		* `http://0.0.0.0:8080`
+* Base de datos
+	* Aunque docker lo contiene: script sql para levantar base de datos:
+		* /database/phone_app.sql
+	* O realizar las migraciones de laravel (No crea usuarios)
+		* `php artisan migrate --seed`   , Crear base de datos y migrar datos de productos iniciales
 
 ## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing. (Para pruebas, las rutas no estan autentificadas)
 
