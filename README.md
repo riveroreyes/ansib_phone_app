@@ -39,153 +39,153 @@ Desarrollado en Docker:
 
 ## Exercise 1: Create an endpoint to retrieve the phone catalog, and pricing. (Para pruebas, las rutas no estan autentificadas)
 
-* Request:
-	Método: GET
-	URL: `http://0.0.0.0:8000/api/product`
+	Request:
+		Método: GET
+		URL: http://0.0.0.0:8000/api/product
+	
+	Response: 
+		[
+		    {
+		        "id": 1,
+		        "name": "OPPO R17",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 150,
+		        "image": "/uploads/oppo_r17.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 2,
+		        "name": "NOKIA 7 PLUS",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 155,
+		        "image": "/uploads/nokia_7_plus.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 3,
+		        "name": "SAMSUMG GALAXI S10E",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 100,
+		        "image": "/uploads/samsuns_galaxi_s10e.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 4,
+		        "name": "HUAWEI P10",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 225,
+		        "image": "/uploads/huawei_p10.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 5,
+		        "name": "XIAOMI MI MIX 25",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 985,
+		        "image": "/uploads/xiaomi_mi_mix_25.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 6,
+		        "name": "APPLE IPHONE 11",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1300,
+		        "image": "/uploads/apple_iphone_11.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 7,
+		        "name": "XIAOMI REDMI 8",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1100,
+		        "image": "/uploads/xiaomi_redmi_8.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 8,
+		        "name": "MOTOROLA ONE MACRO",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1115,
+		        "image": "/uploads/motorola_ne_macro.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 9,
+		        "name": "YEZZ MAX 1 PLUS",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 975,
+		        "image": "/uploads/yezz_max_1_plus.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 10,
+		        "name": "SAMSUMG GALAXI A70S",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1200,
+		        "image": "/uploads/samsung_galaxi_a70s.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 11,
+		        "name": "ONEPLUS 7T",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1200,
+		        "image": "/uploads/oneplus_7t.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 12,
+		        "name": "YESSLIV 1",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1150,
+		        "image": "/uploadsyessliv_1/.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 13,
+		        "name": "XIAOMI REDMI 8A",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1500,
+		        "image": "/uploads/xiaomi_redmi_8a.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 14,
+		        "name": "SAMSUNG GALAXI A20S",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 4500,
+		        "image": "/uploads/samsung_galaxi_a20s.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    },
+		    {
+		        "id": 15,
+		        "name": "OPPO RENO",
+		        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
+		        "price": 1350,
+		        "image": "/uploads/oppo_reno.png",
+		        "created_at": "2019-10-11 01:36:44",
+		        "updated_at": "2019-10-11 01:36:44"
+		    }
+		]	
 
-* Response: 
-	[
-	    {
-	        "id": 1,
-	        "name": "OPPO R17",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 150,
-	        "image": "/uploads/oppo_r17.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 2,
-	        "name": "NOKIA 7 PLUS",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 155,
-	        "image": "/uploads/nokia_7_plus.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 3,
-	        "name": "SAMSUMG GALAXI S10E",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 100,
-	        "image": "/uploads/samsuns_galaxi_s10e.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 4,
-	        "name": "HUAWEI P10",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 225,
-	        "image": "/uploads/huawei_p10.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 5,
-	        "name": "XIAOMI MI MIX 25",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 985,
-	        "image": "/uploads/xiaomi_mi_mix_25.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 6,
-	        "name": "APPLE IPHONE 11",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1300,
-	        "image": "/uploads/apple_iphone_11.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 7,
-	        "name": "XIAOMI REDMI 8",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1100,
-	        "image": "/uploads/xiaomi_redmi_8.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 8,
-	        "name": "MOTOROLA ONE MACRO",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1115,
-	        "image": "/uploads/motorola_ne_macro.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 9,
-	        "name": "YEZZ MAX 1 PLUS",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 975,
-	        "image": "/uploads/yezz_max_1_plus.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 10,
-	        "name": "SAMSUMG GALAXI A70S",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1200,
-	        "image": "/uploads/samsung_galaxi_a70s.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 11,
-	        "name": "ONEPLUS 7T",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1200,
-	        "image": "/uploads/oneplus_7t.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 12,
-	        "name": "YESSLIV 1",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1150,
-	        "image": "/uploadsyessliv_1/.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 13,
-	        "name": "XIAOMI REDMI 8A",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1500,
-	        "image": "/uploads/xiaomi_redmi_8a.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 14,
-	        "name": "SAMSUNG GALAXI A20S",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 4500,
-	        "image": "/uploads/samsung_galaxi_a20s.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    },
-	    {
-	        "id": 15,
-	        "name": "OPPO RENO",
-	        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi praesentium quo, tempore sunt modi architecto natus deserunt veniam consequatur soluta molestias unde autem ad sapiente iure delectus asperiores exercitationem aliquid.",
-	        "price": 1350,
-	        "image": "/uploads/oppo_reno.png",
-	        "created_at": "2019-10-11 01:36:44",
-	        "updated_at": "2019-10-11 01:36:44"
-	    }
-	]	
-
-* Test response Api con curl:
-	`curl -i -H "Accept:application/json" \
-	 	-H "Content-Type:application/json" \ 
-	 	"http://0.0.0.0:8000/api/product"`
+	Test response Api con curl:
+		curl -i -H "Accept:application/json" \
+		 	-H "Content-Type:application/json" \ 
+		 	"http://0.0.0.0:8000/api/product"
 
 ## Exercise 2: Create endpoints to check and create an order.	(Para pruebas, las rutas no estan autentificadas)	
 
@@ -305,34 +305,31 @@ Desarrollado en Docker:
 
 ## It should have test.
 
-	Suite de test con PHPUnit
-		vendor/bin/phpunit
-			Ejecutara:
-				ProductTest.php
-				OrderTest.php
-
+* Suite de test con PHPUnit,	vendor/bin/phpunit, ejecutara:
+	* ProductTest.php
+	* OrderTest.php
 
 ## Microservice approach
 
-	En esta sección utilizaremos Swoole [https://www.swoole.co.uk/](https://www.swoole.co.uk/), Coroutine asynchronous programming framework for PHP,
-	el cual es ideal para generar microservicios ya que: "En comparación con otros marcos o software de programación 
-	asíncrona como Nginx, Tornado, Node.js, Swoole tiene módulos asíncronos de E / S de múltiples hilos integrados. 
-	Los desarrolladores pueden usar sincronización o asíncrona, API de rutina para escribir las aplicaciones. 
-	El marco de red PHP Swoole mejora la eficiencia del equipo de I + D, les permite centrarse en el desarrollo 
-	de productos innovadores.", extraido de su website.
+Orientada a microservicios.
+
+En esta sección utilizaremos Swoole [https://www.swoole.co.uk/](https://www.swoole.co.uk/), Coroutine asynchronous programming framework for PHP,
+el cual es ideal para generar microservicios ya que: "En comparación con otros marcos o software de programación 
+asíncrona como Nginx, Tornado, Node.js, Swoole tiene módulos asíncronos de E / S de múltiples hilos integrados. 
+Los desarrolladores pueden usar sincronización o asíncrona, API de rutina para escribir las aplicaciones. 
+El marco de red PHP Swoole mejora la eficiencia del equipo de I + D, les permite centrarse en el desarrollo 
+de productos innovadores.", extraido de su website.
 
 
-	Para ello deberemos:
-		* Detener el contenedor docker.
-		* Modificar docker-compose.yml, 
-			* Descomentando: command: composer install --ignore-platform-reqs && php artisan swoole:http start
-			* Comentando: #command: composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local
+Para ello deberemos:
+	* Detener el contenedor docker.
+	* Activar el host HTTP asincrono en 0.0.0.0:1215, modificando docker-compose.yml: 
+		* Descomentando: command: `composer install --ignore-platform-reqs && php artisan swoole:http start`
+		* Comentando: #command: `composer install --ignore-platform-reqs && php artisan serve --port 8000 --host 0.0.0.0 --env=env.local`
 
-		De esta forma activamos el host HTTP asincrono en 0.0.0.0:1215
-
-	Y teniendo configurado el framework Laravel para recibir una autentificación de dispositivo a dispositivo, tenemos las siguientes ventajas:
-		* Velocidad en las respuesta.
-		* Multi-hilos en las peticiones.
+Y teniendo configurado el framework Laravel para recibir una autentificación de dispositivo a dispositivo, tenemos las siguientes ventajas:
+	* Velocidad en las respuesta.
+	* Multi-hilos en las peticiones.
 
 	Request:
 		{
@@ -352,16 +349,18 @@ Desarrollado en Docker:
 		curl -i -H "Accept:application/json" -H "Content-Type:application/json" -X POST http://0.0.0.0:1215/oauth/token -d '{"grant_type" : "client_credentials","client_id" : "2","client_secret" : "LChhP5eNpc8rHDs21QRA2v0KiPG27TgfGajx8BrP"}'	
 
 ## How would you improve the system?
-	Existen varias vias, dependiendo del punto de vista:
+Existen varias vias, dependiendo del punto de vista:
 
-	Punto de vista de logica de negocios:
-		Desde luego, ya que es solo se habla de una parte de la orden de venta de telefonos, falta desarrollar clientes, grupos de celulares, marcas, etc.
+* Punto de vista de logica de negocios. Desde luego, ya que es solo se habla de una parte de la orden de venta de telefonos, falta desarrollar::
+	* Clientes.
+	* Grupos de celulares.
+	* Marcas, etc.
 
-	Desde el punto de vista tecnico:
-		Ejecutar colas de procesos asincronas, para distribuir las peticiones al api, esto tambien tiene conexion con el punto siguiente.
+* Desde el punto de vista tecnico:
+	* Ejecutar colas de procesos asincronas, para distribuir las peticiones al api, esto tambien tiene conexion con el punto siguiente.
 
 ## How would you avoid your order API to be overflow?
-	- Establecer un limite de conexiones por minuto por token autentificado.
-	- Establecer un limite de conexiones por ventana de aplicacion, por ejemplo 20 solicitudes por token de acceso.
-	  Siempre enviando un mensaje informativo oportuno antes que el usuario alcance el limite y al alcanzarlo.
+Establecer limites, siempre enviando un mensaje informativo oportuno antes que el usuario los alcance:
+* Establecer un limite de conexiones por minuto por token autentificado.
+* Establecer un limite de conexiones por ventana de aplicacion, por ejemplo 20 solicitudes por token de acceso.
 
