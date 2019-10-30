@@ -3,7 +3,7 @@
 	trait Todo{
 		private $varios;
 		public function getVarios(){
-			return $this->varios; 
+			return $this->varios;
 		}
 		public function setVarios($varios){
 			$this->varios = $varios;
